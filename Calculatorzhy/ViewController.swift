@@ -10,16 +10,24 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    @IBOutlet weak var display: UILabel!
+    
+    var userIsInTheMiddleOfTypingANumber = false
+    
+    @IBAction func six(sender: AnyObject) {
+        let digit = sender.currentTitle!!
+        print("digit = \(digit)")
+        if(userIsInTheMiddleOfTypingANumber) {
+            display.text = display.text! + digit
+        } else {
+            display.text = digit
+            if(digit != "0") {
+                userIsInTheMiddleOfTypingANumber = true
+            }
+        }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func seven(sender: AnyObject) {
     }
-
-
+    
 }
 
