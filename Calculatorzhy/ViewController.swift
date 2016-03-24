@@ -10,24 +10,6 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var display: UILabel!
-    
-    var userIsInTheMiddleOfTypingANumber = false
-    
-    @IBAction func six(sender: AnyObject) {
-        let digit = sender.currentTitle!!
-        print("digit = \(digit)")
-        if(userIsInTheMiddleOfTypingANumber) {
-            display.text = display.text! + digit
-        } else {
-            display.text = digit
-            if(digit != "0") {
-                userIsInTheMiddleOfTypingANumber = true
-            }
-        }
-    }
-    @IBAction func seven(sender: AnyObject) {
-    }
     
 }
 
