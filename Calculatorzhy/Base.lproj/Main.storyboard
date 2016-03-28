@@ -75,9 +75,6 @@
                                 <state key="normal" title="5">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="five:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HhM-7V-kNV"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="CT9-tu-tXA">
                                 <rect key="frame" x="161" y="329" width="78" height="78"/>
@@ -87,9 +84,6 @@
                                 <state key="normal" title="6">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="six:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s7b-gK-jtU"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="KgR-4y-Bqv">
                                 <rect key="frame" x="1" y="249" width="78" height="78"/>
@@ -99,9 +93,6 @@
                                 <state key="normal" title="7">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="seven:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rcH-2f-GuQ"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="tRQ-XV-3Mb">
                                 <rect key="frame" x="161" y="249" width="78" height="78"/>
