@@ -125,7 +125,7 @@ class ViewController: UIViewController {
     @IBAction func Resetcurrent(sender: AnyObject) {
         Pointcount = 0
         Displaycache = ""
-        screen.text = ""
+        screen.text = "0"
     }
     @IBAction func Resetall(sender: AnyObject) {
         Pointcount = 0 //同理，清空重置什么的，都要加上这个
@@ -133,7 +133,7 @@ class ViewController: UIViewController {
         cache = 0.0
         cache2 = nil
         Calculator.Setcurrentalgorithm(.Nochoice)
-        screen.text = ""
+        screen.text = "0"
     }
     @IBAction func equalsign(sender: AnyObject) {
         evaluation()
