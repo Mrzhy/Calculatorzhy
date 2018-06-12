@@ -38,34 +38,34 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var screen: UITextField!
     
-    @IBAction func number9(sender: AnyObject) {
+    @IBAction func number9(_ sender: AnyObject) {
         click("9")
     }
-    @IBAction func number8(sender: AnyObject) {
+    @IBAction func number8(_ sender: AnyObject) {
         click("8")
     }
-    @IBAction func number7(sender: AnyObject) {
+    @IBAction func number7(_ sender: AnyObject) {
         click("7")
     }
-    @IBAction func number6(sender: AnyObject) {
+    @IBAction func number6(_ sender: AnyObject) {
         click("6")
     }
-    @IBAction func number5(sender: AnyObject) {
+    @IBAction func number5(_ sender: AnyObject) {
         click("5")
     }
-    @IBAction func number4(sender: AnyObject) {
+    @IBAction func number4(_ sender: AnyObject) {
         click("4")
     }
-    @IBAction func number3(sender: AnyObject) {
+    @IBAction func number3(_ sender: AnyObject) {
         click("3")
     }
-    @IBAction func number2(sender: AnyObject) {
+    @IBAction func number2(_ sender: AnyObject) {
         click("2")
     }
-    @IBAction func number1(sender: AnyObject) {
+    @IBAction func number1(_ sender: AnyObject) {
         click("1")
     }
-    @IBAction func number0(sender: AnyObject) {
+    @IBAction func number0(_ sender: AnyObject) {
         if screen.text == "0"
         {
             screen.text = screen.text! + ""
@@ -74,10 +74,10 @@ class ViewController: UIViewController {
             click("0")
         }
     }
-    @IBAction func point(sender: AnyObject) {
+    @IBAction func point(_ sender: AnyObject) {
         click(".")
     }
-    @IBAction func plussign(sender: AnyObject) {
+    @IBAction func plussign(_ sender: AnyObject) {
         if Calculator.Readthecurrentalgorithm() != .addition {//如果点击加之前是别的算法就执行这里的代码块
             evaluation()
             Calculator.Setcurrentalgorithm(.addition)
@@ -86,7 +86,7 @@ class ViewController: UIViewController {
         Calculator.Setcurrentalgorithm(.addition)
         evaluation()
     }
-    @IBAction func minussign(sender: AnyObject) {
+    @IBAction func minussign(_ sender: AnyObject) {
         if Calculator.Readthecurrentalgorithm() != .subtraction {
             evaluation()
             Calculator.Setcurrentalgorithm(.subtraction)
@@ -95,7 +95,7 @@ class ViewController: UIViewController {
         Calculator.Setcurrentalgorithm(.subtraction)
         evaluation()
     }
-    @IBAction func multiplicationsign(sender: AnyObject) {
+    @IBAction func multiplicationsign(_ sender: AnyObject) {
         if Calculator.Readthecurrentalgorithm() != .multiplication {
             evaluation()
             Calculator.Setcurrentalgorithm(.multiplication)
@@ -104,7 +104,7 @@ class ViewController: UIViewController {
         Calculator.Setcurrentalgorithm(.multiplication)
         evaluation()
     }
-    @IBAction func divisionsign(sender: AnyObject) {
+    @IBAction func divisionsign(_ sender: AnyObject) {
         if Calculator.Readthecurrentalgorithm() != .division {
             evaluation()
             Calculator.Setcurrentalgorithm(.division)
@@ -113,36 +113,36 @@ class ViewController: UIViewController {
         Calculator.Setcurrentalgorithm(.division)
         evaluation()
     }
-    @IBAction func percent(sender: AnyObject) {
-        if Calculator.Readthecurrentalgorithm() != .Percent {
+    @IBAction func percent(_ sender: AnyObject) {
+        if Calculator.Readthecurrentalgorithm() != .percent {
             evaluation()
-            Calculator.Setcurrentalgorithm(.Percent)
+            Calculator.Setcurrentalgorithm(.percent)
             return
         }
-        Calculator.Setcurrentalgorithm(.Percent)
+        Calculator.Setcurrentalgorithm(.percent)
         evaluation()
     }
-    @IBAction func Resetcurrent(sender: AnyObject) {
+    @IBAction func Resetcurrent(_ sender: AnyObject) {
         Pointcount = 0
         Displaycache = ""
         screen.text = "0"
     }
-    @IBAction func Resetall(sender: AnyObject) {
+    @IBAction func Resetall(_ sender: AnyObject) {
         Pointcount = 0 //同理，清空重置什么的，都要加上这个
         Displaycache = ""
         cache = 0.0
         cache2 = nil
-        Calculator.Setcurrentalgorithm(.Nochoice)
+        Calculator.Setcurrentalgorithm(.nochoice)
         screen.text = "0"
     }
-    @IBAction func equalsign(sender: AnyObject) {
+    @IBAction func equalsign(_ sender: AnyObject) {
         evaluation()
     }
     
     var Pointcount = 0;
-    func click(number:String) {
+    func click(_ number:String) {
         if number == "." { //如果是小数点，就增加计数
-            Pointcount++
+            Pointcount += 1
         }
         if number == "." && Pointcount > 1 { //如果已经输入了一个小数点，还要输入小数点就略过后面的代码，也就不会计入缓存
             return //函数遇到return就会出栈了

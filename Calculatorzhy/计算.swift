@@ -27,9 +27,9 @@ revert：返回
 import Foundation
 
 struct calculation {
-    private var Currentalgorithm:algorithm = .Nochoice
+    fileprivate var Currentalgorithm:algorithm = .nochoice
     
-    mutating func Setcurrentalgorithm(temporary:algorithm) {
+    mutating func Setcurrentalgorithm(_ temporary:algorithm) {
         Currentalgorithm = temporary
     }
     
@@ -42,11 +42,11 @@ struct calculation {
         case subtraction
         case multiplication
         case division
-        case Percent
-        case Nochoice
+        case percent
+        case nochoice
     }
     
-    func Resultseeking(Operationnumber Operationnumber:Double, Operandoperand:Double) ->String {
+    func Resultseeking(Operationnumber:Double, Operandoperand:Double) ->String {
         var revert = ""
         switch Currentalgorithm {
         case .addition:
@@ -57,9 +57,9 @@ struct calculation {
             revert = "\(Operationnumber * Operandoperand)"
         case .division where Operandoperand != 0 :
             revert = "\(Operationnumber / Operandoperand)"
-        case .Percent:
+        case .percent:
             revert = "\(Operationnumber / 100)"
-        case .Nochoice:
+        case .nochoice:
             revert = "错误：未选择算法"
         default:
             revert = "0 不能做被除数！"
